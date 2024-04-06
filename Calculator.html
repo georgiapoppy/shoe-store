@@ -1,64 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
- 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Calculator</title>
-</head>
- 
-<body>
-    <h1>Georgia's Calculator</h1>
-    <p>Enter two numbers and choose an operator, then click the calculate button:</p>
-    <input id="num1" type="number"/>
-    <input id="num1" type="number"/>
-    <button id="add" onclick="add()">+</button>
-    <button id="sub" onclick="sub()">-</button>
-    <button id="times" onclick="times()">x</button>
-    <button id="divide" onclick="divide()">/</button>
-    <button onclick="calculate()">CALCULATE</button>
-    <p id="result">RESULT = </p>
-    <script>
-        var number1 = getElementById("num1").value;
-        var number2 = getElementById("num2").value;
-        var result = 0;
-      	var operator = "null";
-        function calculate() {
-            if (operator == "null") {
-                alert("ERROR: Select an operator");
-            }
-            if ((number1 == "") || (number2 == "")) {
-                alert("ERROR: Enter a number");
-            }
-      		var displayResult = getElementById("result");
-            if (operator == "add") {
-                result = number1 + number2;
-            } else if (operator == "sub") {
-                result = number1 - number2;
-            } else if (operator == "times") {
-                result = number1 x number2;
-            } else if (operator == "divide") {
-                result = number1 / number2;
-            }
-      		displayResult.textContent = "RESULT = " + result;
-        }
-        function add() {
-          getElementById("add").style.color = blue;
-          operator = "add";
-        }
-        function sub() {
-          getElementById("sub").style.color = blue;
-          operator = "sub";
-        }
-        function times() {
-          getElementById("times").style.color = blue;
-          operator = "times";
-        }
-        function divide() {
-          getElementById("divide").style.color = blue;
-          operator = "divide";
-        }
-    </script>
-</body>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Calculator</title>
+  </head>
+  <body>
+      <h1>Georgia's Calculator</h1>
+      <p>Enter two numbers and choose an operator, then click the calculate button:</p>
+      <input id="num1" type="number">
+      <input id="num2" type="number">
+      <button type="button" id="add" onclick="add()">+</button>
+      <button type="button" id="sub" onclick="sub()">-</button>
+      <button type="button" id="times" onclick="times()">x</button>
+      <button type="button" id="divide" onclick="divide()">/</button>
+      <button type="button" onclick="calculate()">CALCULATE</button>
+      <p id="result">RESULT = </p>
+      <script>
+          var number1 = getElementById("num1").value;
+          var number2 = getElementById("num2").value;
+          var result = 0;
+          var operator = "null";
+          function calculate() {
+              if (operator == "null") {
+                  alert("ERROR: Select an operator");
+              }
+              if ((number1 == "") || (number2 == "")) {
+                  alert("ERROR: Enter a number");
+              }
+            var displayResult = getElementById("result");
+              if (operator == "add") {
+                  result = number1 + number2;
+              } else if (operator == "sub") {
+                  result = number1 - number2;
+              } else if (operator == "times") {
+                  result = number1 * number2;
+              } else if (operator == "divide") {
+                  result = number1 / number2;
+              }
+            displayResult.textContent = "RESULT = " + result;
+          }
+          function add() {
+            getElementById("add").style.color = blue;
+            operator = "add";
+          }
+          function sub() {
+            getElementById("sub").style.color = blue;
+            operator = "sub";
+          }
+          function times() {
+            getElementById("times").style.color = blue;
+            operator = "times";
+          }
+          function divide() {
+            getElementById("divide").style.color = blue;
+            operator = "divide";
+          }
+      </script>
+  </body>
 </html>
