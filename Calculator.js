@@ -50,7 +50,7 @@ function calculate() {
     if (operator == 0) {
         alert("ERROR: Click an operator");
     }
-    if ((number1 == "") || (number2 == "") (number1 == null) || (number2 == null)) {
+    if ((number1 == "") || (number2 == "") || (number1 == null) || (number2 == null)) {
         alert("ERROR: Enter a number");
     }
     if (operator == 1) {
