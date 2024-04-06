@@ -11,31 +11,32 @@
       <p>Enter two numbers and choose an operator, then click the calculate button:</p>
       <input id="num1" type="number">
       <input id="num2" type="number">
-      <button type="button" id="add" onclick="operators('add')">+</button>
-      <button type="button" id="sub" onclick="operators('sub')">-</button>
-      <button type="button" id="times" onclick="operators('times')">x</button>
-      <button type="button" id="divide" onclick="operators('divide')">/</button>
+      <button type="button" id="add" onclick="add()">+</button>
+      <button type="button" id="sub" onclick="sub()">-</button>
+      <button type="button" id="times" onclick="times()">x</button>
+      <button type="button" id="divide" onclick="divide()">/</button>
+      <br>
       <button type="button" onclick="calculate()">CALCULATE</button>
       <p id="result">RESULT = </p>
       <script>
-          var number1 = parseInt(getElementById("num1").value);
-          var number2 = parseInt(getElementById("num2").value);
           var result = 0;
           var operator = "null";
           function calculate() {
+              var number1 = parseInt(getElementById("num1").value);
+              var number2 = parseInt(getElementById("num2").value);
               if (operator == "null") {
                   alert("ERROR: Select an operator");
               }
               if ((number1 == "") || (number2 == "")) {
                   alert("ERROR: Enter a number");
               }
-              if (operator == "add") {
+              if (operator == 'add') {
                   result = number1 + number2;
-              } else if (operator == "sub") {
+              } else if (operator == 'sub') {
                   result = number1 - number2;
-              } else if (operator == "times") {
+              } else if (operator == 'times') {
                   result = number1 * number2;
-              } else if (operator == "divide") {
+              } else if (operator == 'divide') {
                   if (num2 == 0) {
                     result = "undefined";
                   } else {
@@ -44,9 +45,21 @@
               }
               getElementById("result").innerHTML = "RESULT = " + result;
           }
-          function operators(op) {
-            getElementById(op).style.color = blue;
-            operator = op;
+          function add() {
+            getElementById("add").style.color = blue;
+            operator = "add";
+          }
+          function sub() {
+            getElementById("sub").style.color = blue;
+            operator = "sub";
+          }
+          function times() {
+            getElementById("times").style.color = blue;
+            operator = "times";
+          }
+          function divide() {
+            getElementById("divide").style.color = blue;
+            operator = "divide";
           }
       </script>
   </body>
