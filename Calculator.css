@@ -14,12 +14,15 @@ button {
 h1 {
     text-decoration-line: underline;
     text-decoration-style: wavy;
-    word-spacing: 10pc;
+    text-shadow: 2px;
+    font-weight: bold;
+}
+h2 {
     text-shadow: 2px;
     font-weight: bold;
 }
 #calculator {
-    background-color: darkgrey;
+    background-color: darkslategray;
     font-weight: bold;
     color: white;
 }
