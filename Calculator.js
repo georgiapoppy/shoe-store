@@ -4,6 +4,9 @@ function add() {
     document.getElementById("subB").style.backgroundColor = "white";
     document.getElementById("timesB").style.backgroundColor = "white";
     document.getElementById("divideB").style.backgroundColor = "white";
+    document.getElementById("subB").style.color = "black";
+    document.getElementById("timesB").style.color = "black";
+    document.getElementById("divideB").style.color = "black";
     document.getElementById("addB").style.color = "white";
 operator = 1;
 }
@@ -12,6 +15,9 @@ function sub() {
     document.getElementById("addB").style.backgroundColor = "white";
     document.getElementById("timesB").style.backgroundColor = "white";
     document.getElementById("divideB").style.backgroundColor = "white";
+    document.getElementById("addB").style.color = "black";
+    document.getElementById("timesB").style.color = "black";
+    document.getElementById("divideB").style.color = "black";
     document.getElementById("subB").style.color = "white";
 operator = 2;
 }
@@ -20,6 +26,9 @@ function times() {
     document.getElementById("subB").style.backgroundColor = "white";
     document.getElementById("addB").style.backgroundColor = "white";
     document.getElementById("divideB").style.backgroundColor = "white";
+    document.getElementById("addB").style.color = "black";
+    document.getElementById("subB").style.color = "black";
+    document.getElementById("divideB").style.color = "black";
     document.getElementById("timesB").style.color = "white";
 operator = 3;
 }
@@ -28,6 +37,9 @@ function divide() {
     document.getElementById("subB").style.backgroundColor = "white";
     document.getElementById("timesB").style.backgroundColor = "white";
     document.getElementById("addB").style.backgroundColor = "white";
+    document.getElementById("addB").style.color = "black";
+    document.getElementById("timesB").style.color = "black";
+    document.getElementById("subB").style.color = "black";
     document.getElementById("divideB").style.color = "white";
 operator = 4;
 }
