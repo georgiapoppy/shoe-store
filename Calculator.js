@@ -44,15 +44,17 @@ function divide() {
 operator = 4;
 }
 function calculate() {
-    var number1 = parseInt(document.getElementById("num1").value);
-    var number2 = parseInt(document.getElementById("num2").value);
+    var number1 = document.getElementById("num1").value;
+    var number2 = document.getElementById("num2").value;
     var result = 0;
     if (operator == 0) {
         alert("ERROR: Click an operator");
     }
-    if ((number1 == "") || (number2 == "") || (number1 == null) || (number2 == null)) {
+    if ((number1 == 0) || (number2 == 0) || (number1 == null) || (number2 == null)) {
         alert("ERROR: Enter a number");
     }
+    number1 = parseInt(number1);
+    number2 = parseInt(number2);
     if (operator == 1) {
         result = number1 + number2;
     } else if (operator == 2) {
