@@ -11,44 +11,48 @@
       <p>Enter two numbers and choose an operator, then click the calculate button:</p>
       <input id="num1" type="number">
       <input id="num2" type="number">
-      <button type="submit" onclick="add()">+</button>
-      <button type="submit" onclick="sub()">-</button>
-      <button type="submit" onclick="times()">x</button>
-      <button type="submit" onclick="divide()">/</button>
+      <button type="button" id="addB" onclick="add()">+</button>
+      <button type="button" id="subB" onclick="sub()">-</button>
+      <button type="button" id="timesB" onclick="times()">x</button>
+      <button type="button" id="divideB" onclick="divide()">/</button>
       <br><br>
       <button type="button" onclick="calculate()">CALCULATE</button>
       <p id="result">RESULT = </p>
       <script>
+          var operator = 0;
           function add() {
-            document.getElementById("add").style.color = blue;
-            operator = "add";
+            document.getElementById("addB").style.color = blue;
+            operator = 1;
           }
           function sub() {
-            document.getElementById("sub").style.color = blue;
-            operator = "sub";
+            document.getElementById("subB").style.color = blue;
+            operator = 2;
           }
           function times() {
-            document.getElementById("times").style.color = blue;
-            operator = "times";
+            document.getElementById("timesB").style.color = blue;
+            operator = 3;
           }
           function divide() {
-            document.getElementById("divide").style.color = blue;
-            operator = "divide";
+            document.getElementById("divideB").style.color = blue;
+            operator = 4;
           }
           function calculate() {
               var number1 = parseInt(document.getElementById("num1").value);
               var number2 = parseInt(document.getElementById("num2").value);
               var result = 0;
+              if (operator == 0) {
+                  alert("ERROR: Click an operator");
+              }
               if ((number1 == "") || (number2 == "")) {
                   alert("ERROR: Enter a number");
               }
-              if (operator == "add") {
+              if (operator == 1) {
                   result = number1 + number2;
-              } else if (operator == "sub") {
+              } else if (operator == 2) {
                   result = number1 - number2;
-              } else if (operator == "times") {
+              } else if (operator == 3) {
                   result = number1 * number2;
-              } else if (operator == "divide") {
+              } else if (operator == 4) {
                   if (num2 == 0) {
                     result = "undefined";
                   } else {
