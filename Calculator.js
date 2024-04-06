@@ -1,22 +1,34 @@
 var operator = 0;
 function add() {
-document.getElementById("addB").style.backgroundColor = "darkgray";
-document.getElementById("addB").style.color = "white";
+    document.getElementById("addB").style.backgroundColor = "darkgray";
+    document.getElementById("subB").style.backgroundColor = "white";
+    document.getElementById("timesB").style.backgroundColor = "white";
+    document.getElementById("divideB").style.backgroundColor = "white";
+    document.getElementById("addB").style.color = "white";
 operator = 1;
 }
 function sub() {
-document.getElementById("subB").style.backgroundColor = "darkgray";
-document.getElementById("subB").style.color = "white";
+    document.getElementById("subB").style.backgroundColor = "darkgray";
+    document.getElementById("addB").style.backgroundColor = "white";
+    document.getElementById("timesB").style.backgroundColor = "white";
+    document.getElementById("divideB").style.backgroundColor = "white";
+    document.getElementById("subB").style.color = "white";
 operator = 2;
 }
 function times() {
-document.getElementById("timesB").style.backgroundColor = "darkgray";
-document.getElementById("timesB").style.color = "white";
+    document.getElementById("timesB").style.backgroundColor = "darkgray";
+    document.getElementById("subB").style.backgroundColor = "white";
+    document.getElementById("addB").style.backgroundColor = "white";
+    document.getElementById("divideB").style.backgroundColor = "white";
+    document.getElementById("timesB").style.color = "white";
 operator = 3;
 }
 function divide() {
-document.getElementById("divideB").style.backgroundColor = "darkgray";
-document.getElementById("divideB").style.color = "white";
+    document.getElementById("divideB").style.backgroundColor = "darkgray";
+    document.getElementById("subB").style.backgroundColor = "white";
+    document.getElementById("timesB").style.backgroundColor = "white";
+    document.getElementById("addB").style.backgroundColor = "white";
+    document.getElementById("divideB").style.color = "white";
 operator = 4;
 }
 function calculate() {
