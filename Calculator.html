@@ -15,15 +15,15 @@
       <button type="button" id="sub" onclick="sub()">-</button>
       <button type="button" id="times" onclick="times()">x</button>
       <button type="button" id="divide" onclick="divide()">/</button>
-      <br>
+      <br><br>
       <button type="button" onclick="calculate()">CALCULATE</button>
       <p id="result">RESULT = </p>
       <script>
           var result = 0;
           var operator = "null";
           function calculate() {
-              var number1 = parseInt(getElementById("num1").value);
-              var number2 = parseInt(getElementById("num2").value);
+              var number1 = parseInt(document.getElementById("num1").value);
+              var number2 = parseInt(document.getElementById("num2").value);
               if (operator == "null") {
                   alert("ERROR: Select an operator");
               }
@@ -43,22 +43,22 @@
                     result = number1 / number2;
                   }
               }
-              getElementById("result").innerHTML = "RESULT = " + result;
+              document.getElementById("result").innerHTML = "RESULT = " + result;
           }
           function add() {
-            getElementById("add").style.color = blue;
+            document.getElementById("add").style.color = blue;
             operator = "add";
           }
           function sub() {
-            getElementById("sub").style.color = blue;
+            document.getElementById("sub").style.color = blue;
             operator = "sub";
           }
           function times() {
-            getElementById("times").style.color = blue;
+            document.getElementById("times").style.color = blue;
             operator = "times";
           }
           function divide() {
-            getElementById("divide").style.color = blue;
+            document.getElementById("divide").style.color = blue;
             operator = "divide";
           }
       </script>
