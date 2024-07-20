@@ -1,1 +1,1 @@
-Put your files for part1 here 
+This is a webpage and database for a shoe store :)
